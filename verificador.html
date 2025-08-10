@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Validar Certificado - Good Medical</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <div class="wrap">
+      <div class="brand"><h1>Good Medical</h1></div>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <h2>Verificador de Certificados</h2>
+      <p>Ingrese el código del certificado para validar:</p>
+      <div class="verify">
+        <input id="codigo" placeholder="GM2025-701" />
+        <button id="btnCheck" class="btn">Verificar</button>
+      </div>
+      <div id="resultado"></div>
+    </div>
+  </main>
+
+  <script>
+    let certificados = [];
+    fetch('certificados.json')
+      .then(r => r.json())
+      .then(data => certificados = data)
+      .catch(e => {
+        document.getElementById('resultado').innerText = 'Error cargando base de certificados.';
+        console.error(e);
+      });
+
+    document.getElementById('btnCheck').addEventListener('click', () => {
+      const code = document.getElementById('codigo').value.trim().toUpperCase();
+      const resultado = document.getElementById('resultado');
+      if (!code) { resultado.innerHTML = '<div class="invalido">Ingresa un código.</div>'; return; }
+      const c = certificados.find(x => x.codigo === code);
+      if (c) {
+        resultado.innerHTML = `
+          <div class="valido">
+            <strong>✅ CERTIFICADO VÁLIDO</strong><br>
+            <b>Nombre:</b> ${c.nombre}<br>
+            <b>Curso:</b> ${c.curso}<br>
+            <b>Fecha:</b> ${c.fecha}<br>
+            <a href="${c.link}" target="_blank">Abrir certificado (PDF)</a>
+          </div>
+        `;
+      } else {
+        resultado.innerHTML = '<div class="invalido">❌ Código no encontrado.</div>';
+      }
+    });
+  </script>
+</body>
+</html>

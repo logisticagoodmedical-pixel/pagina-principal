@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Good Medical - Centro de Capacitación Médica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Good Medical</h1>
+        <p class="tag">Centro de capacitación médica</p>
+      </div>
+      <nav class="main-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="verificador.html">Validar certificado</a>
+        <a href="#pagos" class="btn small">Pagos</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h2>Formación médica confiable y actualizada</h2>
+        <p>Diplomados, cursos y talleres prácticos con certificación digital verificable.</p>
+        <a href="#cursos" class="btn">Ver cursos</a>
+      </div>
+      <div class="hero-media">
+        <img src="img/hero.jpg" alt="Formación médica" />
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="section">
+    <div class="wrap">
+      <h3>Quiénes somos</h3>
+      <p>Good Medical es un centro de capacitación orientado a profesionales de la salud. Diseñamos cursos prácticos con enfoque en habilidades clínicas, actualización de protocolos y certificación digital.</p>
+      <div class="cards">
+        <div class="card">
+          <h4>Misión</h4>
+          <p>Mejorar la práctica clínica mediante formación basada en evidencia.</p>
+        </div>
+        <div class="card">
+          <h4>Visión</h4>
+          <p>Ser referencia en educación continua para salud en la región.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cursos" class="section alt">
+    <div class="wrap">
+      <h3>Nuestros cursos y diplomados</h3>
+      <div class="grid">
+        <article class="course">
+          <img src="img/curso1.jpg" alt="Emergencias Médicas" />
+          <h4>Diplomado en Emergencias Médicas</h4>
+          <p>Formación integral en manejo de emergencias y soporte vital.</p>
+          <a class="cta" href="#pagos">Inscribirme</a>
+        </article>
+        <article class="course">
+          <img src="img/curso2.jpg" alt="Tuberculosis" />
+          <h4>Tuberculosis en la Práctica Clínica</h4>
+          <p>Actualización clínica y manejo de TB en entornos sanitarios.</p>
+          <a class="cta" href="#pagos">Inscribirme</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="verificacion" class="section">
+    <div class="wrap">
+      <h3>Validar certificado</h3>
+      <p>Ingrese el código que aparece en su certificado para verificar.</p>
+      <div class="inline">
+        <input id="codigoInput" placeholder="Ej.: GM2025-701" />
+        <a class="btn" href="verificador.html">Ir al verificador</a>
+      </div>
+      <p class="muted">O use la página de validación directa.</p>
+    </div>
+  </section>
+
+  <section id="pagos" class="section alt">
+    <div class="wrap">
+      <h3>Pagos seguros</h3>
+      <p>Pague su inscripción de forma segura con PayPal o vía transferencia.</p>
+      <!-- Reemplaza el href por tu enlace real -->
+      <div class="pay-buttons">
+        <a class="btn" href="https://www.paypal.com/paypalme/TUCUENTA" target="_blank">Pagar con PayPal</a>
+        <a class="btn outline" href="mailto:contacto@goodmedical.org?subject=Consulta%20pago">Solicitar pago por email</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <div class="wrap">
+      <h3>Contacto</h3>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Email:</strong> contacto@goodmedical.org</p>
+          <p><strong>Tel:</strong> +51 912 345 678</p>
+          <p><strong>Dirección:</strong> Lima, Perú</p>
+        </div>
+        <form action="mailto:contacto@goodmedical.org" method="post" enctype="text/plain" class="contact-form">
+          <input name="Nombre" placeholder="Tu nombre" required />
+          <input type="email" name="Email" placeholder="Tu email" required />
+          <textarea name="Mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>&copy; 2025 Good Medical. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+</body>
+</html>
